@@ -1,0 +1,55 @@
+.masthead .nav-bgc {
+	background-color: rgba(100,200,100,0.9);
+}
+.all-body .row {
+	margin: 0;
+
+}
+.all-body .topic {
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #eee;
+}
+.all-body .user-avatar {
+	margin-top: 10px;
+	height: 30px;
+	width: 30px;
+}
+.all-body .topic span {
+	/*display: inline-block;*/
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.all-body .topic .top {
+	background-color: #999;
+}
+.active {
+	background-color: #eee;
+}
+
+
+/*detail页面的样式*/
+.detail .top {
+	font-size: 16px;
+	background-color: #c9c;
+}
+.detail .detailB {
+	border-bottom: 1px solid #eee;
+}
+/* .detail .detailB .topic {
+	height: 50px;
+	line-height: 50px;
+} */
+.detail .detailB .topic .user-avatar {
+	margin-top: 10px;
+	height: 30px;
+	width: 30px;
+}
+.detail .detailB .topic span {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.detail .markdown-text img {
+	width: 50%;	
+	display: block;
+}

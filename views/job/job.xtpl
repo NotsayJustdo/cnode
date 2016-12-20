@@ -1,0 +1,62 @@
+
+{{extend ('../layout/index')}}
+{{#block ('content')}}
+<!-- 导航头部start -->
+  <div class="container">
+    <div class="masthead">
+      <h3 class="text-muted">cnode社区</h3>
+      <ul class="nav nav-justified nav-bgc">
+        <li><a href="/cnode/all">全部</a></li>
+        <li><a href="/cnode/good">精华</a></li>
+        <li><a href="/cnode/share">分享</a></li>
+        <li><a href="/cnode/ask">问答</a></li>
+        <li><a href="/cnode/job">招聘</a></li>
+      </ul>
+    </div>
+  </div>
+<!-- 导航头部end -->
+<!-- 主体部分start -->
+  <div class="container all-body">
+    {{#each (datas)}}
+    <div class="row">
+      <ul class="media-list">
+        <li class="media topic" >
+          <a class="pull-left" href="#">
+            <img class="media-object user-avatar" src="{{this.author.avatar_url}}" alt="">
+          </a>
+          <div class="media-body">
+            <span>{{this.reply_count}}/{{this.visit_count}}</span>
+            <span class="top">{{#if(this.top)}} 置顶 {{else}} 分享 {{/if}}</span>
+            <a href="/cnode/all/{{this.id}}">{{this.title}}</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    {{/each}}
+  </div>
+<!-- 主体部分end -->
+
+<!-- 分页start -->
+<div class="container">
+    <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="/cnode/job?tab=job&page=1">1</a></li>
+      <li><a href="/cnode/job?tab=job&page=2">2</a></li>
+      <li><a href="/cnode/job?tab=job&page=3">3</a></li>
+      <li><a href="/cnode/job?tab=job&page=4">4</a></li>
+      <li><a href="/cnode/job?tab=job&page=5">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>
+<!-- 分页end -->
+{{/block}}
+
+{{#block ('script')}}
+<script>
+  seajs.use('/js/all.js');
+</script>
+{{/block}}
+<!-- <script src="/assets/jquery/jquery.js"></script>
+<script src="/assets/nprogress/nprogress.js"></script>
+<script src="/js/all.js"></script> -->
+

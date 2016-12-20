@@ -1,0 +1,41 @@
+
+{{extend ('../layout/index')}}
+{{#block ('content')}}
+  <div class="container detail">
+    <div class="row">
+      <h1><span class="top">{{#if(datas.data.top)}}置顶{{/if}}</span>{{datas.data.title}}</h1>
+      <span>发布于{{datas.data.create_at}}·作者{{datas.data.author.loginname}}·{{datas.data.visit_count}}次浏览·来自{{#if(datas.data.tab === 'share')}} 分享 {{elseif (datas.data.tab === 'good')}} 优秀 {{else}} 其他 {{/if}}</span>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="content">{{{datas.data.content}}}</div>
+    </div>
+    <hr>
+    <p>{{datas.data.replies.length}} 条回复</p>
+    {{#each (datas.data.replies)}}
+    <div class="row detailB">
+      <ul class="media-list">
+        <li class="media topic" >
+          <a class="pull-left" href="#">
+            <img class="media-object user-avatar" src="{{this.author.avatar_url}}" alt=""/>
+          </a>
+          <div class="media-body">
+            <a href="">{{this.author.loginname}}</a>
+            <p class="commentContentPlace">{{{this.content}}}</p>
+            <div class="comment"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    {{/each}}
+  </div>
+  {{/block}}
+
+{{#block ('script')}}
+<script>
+  seajs.use('/js/detail.js');
+</script>
+{{/block}}
+<!-- <script src="/assets/jquery/jquery.js"></script>
+<script src="/assets/nprogress/nprogress.js"></script>
+<script src="/js/all.js"></script> -->
