@@ -29,7 +29,7 @@
               <div class="titleContent">
                 <span>{{this.reply_count}}/{{this.visit_count}}</span>
                 <span class="top">{{#if(this.top)}} 置顶 {{elseif (this.tab === 'share')}} 分享 {{elseif (this.tab === 'good')}} 精华 {{elseif (this.tab === 'ask')}} 问答 {{/if}}</span>
-                <a href="/{{this.id}}">{{this.title}}</a>
+                <a href="/all/{{this.id}}">{{this.title}}</a>
               </div>
               <span class="pull-right">{{this.convertTime}}</span>
             </div>

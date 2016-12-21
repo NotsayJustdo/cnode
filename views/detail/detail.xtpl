@@ -13,7 +13,8 @@
     <hr>
     <p>{{datas.data.replies.length}} 条回复</p>
     {{#each (datas.data.replies)}}
-    <div class="row detailB">
+    <div class="container">
+      <div class="row detailB">
       <ul class="media-list">
         <li class="media topic" >
           <a class="pull-left" href="#">
@@ -26,6 +27,8 @@
         </li>
       </ul>
     </div>
+    </div>
+    
     {{/each}}
   </div>
   {{/block}}
