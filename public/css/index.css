@@ -10,18 +10,23 @@
 	line-height: 50px;
 	border-bottom: 1px solid #eee;
 }
-.all-body .user-avatar {
-	margin-top: 10px;
-	height: 30px;
-	width: 30px;
-}
 .all-body .topic span {
 	/*display: inline-block;*/
 	margin-left: 2px;
 	margin-right: 2px;
 }
+.all-body .user-avatar {
+	margin-top: 10px;
+	height: 30px;
+	width: 30px;
+}
 .all-body .topic .top {
-	background-color: #999;
+	background-color: #ccc;
+	border-radius: 2px;
+}
+.all-body .topic .titleContent {
+	display: inline-block;
+	width: 80%;
 }
 .active {
 	background-color: #eee;

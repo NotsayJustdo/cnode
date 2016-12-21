@@ -20,9 +20,8 @@
             <img class="media-object user-avatar" src="{{this.author.avatar_url}}" alt=""/>
           </a>
           <div class="media-body">
-            <a href="">{{this.author.loginname}}</a>
-            <p class="commentContentPlace">{{{this.content}}}</p>
-            <div class="comment"></div>
+            <a href="">{{this.author.loginname}}</a> {{xindex+1}}楼·<span>{{this.convertTime}}</span>
+            <p>{{{this.content}}}</p>
           </div>
         </li>
       </ul>

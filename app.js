@@ -18,7 +18,7 @@ app.set('views', __dirname+'/views');
 app.set('view engine', 'xtpl')
 
 // 使用路由
-app.use('/cnode', all);
+app.use('/', all);
 app.use('/cnode', good);
 app.use('/cnode', share);
 app.use('/cnode', ask);

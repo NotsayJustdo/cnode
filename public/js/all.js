@@ -25,4 +25,5 @@ define(function(require, exports, module) {
 	// ngprogress
 	ngProgress.start();	
 	ngProgress.done();
+	
 })

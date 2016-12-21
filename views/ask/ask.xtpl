@@ -6,7 +6,7 @@
     <div class="masthead">
       <h3 class="text-muted">cnode社区</h3>
       <ul class="nav nav-justified nav-bgc">
-        <li><a href="/cnode/all">全部</a></li>
+        <li><a href="/">全部</a></li>
         <li><a href="/cnode/good">精华</a></li>
         <li><a href="/cnode/share">分享</a></li>
         <li><a href="/cnode/ask">问答</a></li>
@@ -25,9 +25,11 @@
             <img class="media-object user-avatar" src="{{this.author.avatar_url}}" alt="">
           </a>
           <div class="media-body">
-            <span>{{this.reply_count}}/{{this.visit_count}}</span>
-            <span class="top">{{#if(this.top)}} 置顶 {{else}} 分享 {{/if}}</span>
-            <a href="/cnode/all/{{this.id}}">{{this.title}}</a>
+            <div class="titleContent">
+              <span>{{this.reply_count}}/{{this.visit_count}}</span>
+              <a href="/cnode/ask/{{this.id}}">{{this.title}}</a>
+            </div>
+            <span class="pull-right">{{this.convertTime}}</span>
           </div>
         </li>
       </ul>
