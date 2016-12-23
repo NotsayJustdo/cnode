@@ -25,6 +25,6 @@ app.use('/cnode', ask);
 app.use('/cnode', job);
 
 
-app.listen(8080, '127.0.0.1', () => {
+app.listen(3000, '127.0.0.1', () => {
 	console.log('running at port 3000');
 })
